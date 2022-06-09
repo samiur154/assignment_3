@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="final_assignment" type="keyboard.py" name="keyboard" output="screen" launch-prefix="konsole -e" />
+    <node pkg="final_assignment" type="wall_follow_service.py" name="wall_follow_service" output="screen" />
+    <node pkg="final_assignment" type="obstacle_avoidance.py" name="obstacle_avoidance" output="screen" />
+</launch>
