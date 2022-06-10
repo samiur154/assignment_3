@@ -32,14 +32,11 @@ To compile the new packages installed on workspace, remember to use catkin_make 
 $roslaunch final_assignment simulation_gmapping.launch
 $roslaunch final_assignment move_base.launch
 ```
-Practically with the first launch file you start the Gazebo and rviz simulator and you can see robots within the Gazebo and with second launch file you use to know the map and obstacles that is used to send goal to the robot.
+In the first launch file we can  start the Gazebo and rviz simulator.
+during running time of lauch file i got many times error of the operatig  system because directory contain cache file ,by the help of below code we can solve the problem 
 
-Now then visualize this map in your system:
-![photo_2022-01-26_11-50-54](https://user-images.githubusercontent.com/80394968/151150507-fb636911-7eff-4a1c-8d6b-32914645cd42.jpg)
-
-It can happen to run the following launch files many times and finding an error on the operating system part (in my case linux) log file disk is full, because the directory that contains the cache file has a limited size so it can cause this. You can solve the following problem by doing:
 ```
-$rosclean purge
+$rosclean purge 
 ```
 Clears all cache files created by the system. Be careful in some cases it can also delete the cache important files so used only in case of need.
 
@@ -53,8 +50,7 @@ After following this command you will see in the terminal window asking you to e
 ```
 $rosrun final_assignment keyboard.py
 ```
-The user can guide the robot in the Gazebo area with the keyboard, all the necessary instructions are reported in the terminal window. User must view a screen like this:
-![photo_2022-01-26_11-56-49](https://user-images.githubusercontent.com/80394968/151151753-6be09f8f-6fc7-4b94-9e5d-114f78c9aae0.jpg)
+The user can use the keyboard to guide the robot about the Gazebo area:
 
 5. To make third part work:
 ```
@@ -67,9 +63,6 @@ Remember for this part a konsole opens in the system to guide the robot. If you 
 $sudo apt-get update
 $sudo apt-get install konsole
 ```
-Dynamic graph of what’s going on in the system
-
-![photo_2022-01-26_19-06-21](https://user-images.githubusercontent.com/80394968/151221363-f6d84de5-d43d-46db-ab85-bd5434a9b2ae.jpg)
 
 Flowchart(General idea behind the program)
 ----------------------
